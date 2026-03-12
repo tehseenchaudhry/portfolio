@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './pages/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -8,6 +8,9 @@ import Skill from './pages/Skill';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from './pages/Footer';
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // Icons for background
 import { 
@@ -23,17 +26,25 @@ import {
 } from 'lucide-react';
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }, []);
+
   return (
     <div className="min-h-screen bg-white relative overflow-x-hidden">
       
-      {/* ========== BACKGROUND DECORATIONS ========== */}
-      
-      {/* Large Blurred Circles */}
+      {/* BACKGROUND DECORATIONS */}
+
+      {/* Blurred Circles */}
       <div className="fixed top-20 left-10 w-64 h-64 bg-violet-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob pointer-events-none"></div>
       <div className="fixed top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000 pointer-events-none"></div>
       <div className="fixed bottom-20 left-1/3 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000 pointer-events-none"></div>
-      
-      {/* Floating Icons - Left Side */}
+
+      {/* Floating Icons - Left */}
       <div className="fixed left-5 top-1/4 text-violet-200/30 animate-float-slow pointer-events-none">
         <Code size={40} />
       </div>
@@ -43,8 +54,8 @@ function App() {
       <div className="fixed left-20 bottom-1/4 text-violet-200/20 animate-float-delayed pointer-events-none">
         <Palette size={50} />
       </div>
-      
-      {/* Floating Icons - Right Side */}
+
+      {/* Floating Icons - Right */}
       <div className="fixed right-5 top-1/3 text-violet-200/30 animate-float-delayed pointer-events-none">
         <Layout size={35} />
       </div>
@@ -54,10 +65,9 @@ function App() {
       <div className="fixed right-20 bottom-1/3 text-violet-200/25 animate-float-slow pointer-events-none">
         <GitBranch size={30} />
       </div>
-      
-      {/* Dots Pattern */}
+
+      {/* Dot Pattern */}
       <div className="fixed inset-0 pointer-events-none">
-        {/* Small dots */}
         <div className="absolute top-20 left-1/4 w-1 h-1 bg-violet-300/30 rounded-full"></div>
         <div className="absolute top-40 right-1/3 w-2 h-2 bg-violet-400/20 rounded-full"></div>
         <div className="absolute bottom-1/3 left-1/2 w-1.5 h-1.5 bg-violet-300/40 rounded-full"></div>
@@ -68,15 +78,17 @@ function App() {
         <div className="absolute top-1/2 right-1/2 w-2 h-2 bg-violet-400/30 rounded-full"></div>
       </div>
 
-      {/* Grid Lines (very subtle) */}
-      <div className="fixed inset-0 pointer-events-none" 
-           style={{
-             backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(139, 92, 246, 0.05) 1px, transparent 0)',
-             backgroundSize: '50px 50px'
-           }}>
-      </div>
+      {/* Grid Pattern */}
+      <div
+        className="fixed inset-0 pointer-events-none"
+        style={{
+          backgroundImage:
+            'radial-gradient(circle at 1px 1px, rgba(139, 92, 246, 0.05) 1px, transparent 0)',
+          backgroundSize: '50px 50px'
+        }}
+      ></div>
 
-      {/* Sparkle Icons */}
+      {/* Sparkles */}
       <div className="fixed top-1/4 right-1/4 text-violet-200/20 animate-pulse-slow pointer-events-none">
         <Sparkles size={20} />
       </div>
@@ -87,7 +99,7 @@ function App() {
         <Sparkles size={25} />
       </div>
 
-      {/* ========== MAIN CONTENT ========== */}
+      {/* MAIN CONTENT */}
       <div className="relative z-10">
         <Navbar />
         <Home />
