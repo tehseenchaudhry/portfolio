@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CV from './pages/CV';
 
 function App() {
 
@@ -105,6 +106,7 @@ function App() {
         <Navbar />
         <Home />
         <About />
+        <CV/>
         {/* <Services /> */}
         <Experience />
         <Skill />

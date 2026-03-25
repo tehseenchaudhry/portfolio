@@ -168,19 +168,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* Resume Button */}
-        <div 
-          className="mt-8 flex flex-col gap-6"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="900"
-        >
-          <button className="inline-flex items-center gap-2 mx-auto px-8 py-3 rounded-full bg-violet-600/80 hover:bg-violet-500 text-white font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-violet-600/30">
-            <FileText className="w-5 h-5" />
-            Download Resume
-          </button>
-        </div>
       </div>
     </section>
   );
