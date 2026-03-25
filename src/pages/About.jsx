@@ -34,7 +34,7 @@ const About = () => {
 
         {/* Main Content Grid */}
         <div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-10 border border-gray-600 p-8 rounded-2xl bg-violet-100/50 backdrop-blur-lg"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10 border border-violet-800 p-8 rounded-2xl bg-violet-100 backdrop-blur-lg"
           data-aos="fade-up"
           data-aos-duration="1000"
           data-aos-delay="100"
@@ -112,7 +112,7 @@ const About = () => {
             >
               Frontend React.js Developer
             </h3>
-            
+             
             <p 
               className="text-gray-600 leading-relaxed mb-6"
               data-aos="fade-up"

@@ -20,10 +20,11 @@ import {
   Layout, 
   Smartphone,
   GitBranch,
-  Cloud,
   Star,
   Sparkles
 } from 'lucide-react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -45,24 +46,24 @@ function App() {
       <div className="fixed bottom-20 left-1/3 w-80 h-80 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000 pointer-events-none"></div>
 
       {/* Floating Icons - Left */}
-      <div className="fixed left-5 top-1/4 text-violet-200/30 animate-float-slow pointer-events-none">
+      <div className="fixed left-5 top-1/4 text-violet-600/20 animate-float-slow pointer-events-none">
         <Code size={40} />
       </div>
-      <div className="fixed left-10 top-2/3 text-violet-200/40 animate-float pointer-events-none">
+      <div className="fixed left-10 top-2/3 text-violet-600/30 animate-float pointer-events-none">
         <Atom size={30} />
       </div>
-      <div className="fixed left-20 bottom-1/4 text-violet-200/20 animate-float-delayed pointer-events-none">
+      <div className="fixed left-20 bottom-1/4 text-violet-600/10 animate-float-delayed pointer-events-none">
         <Palette size={50} />
       </div>
 
       {/* Floating Icons - Right */}
-      <div className="fixed right-5 top-1/3 text-violet-200/30 animate-float-delayed pointer-events-none">
+      <div className="fixed right-5 top-1/3 text-violet-600/20 animate-float-delayed pointer-events-none">
         <Layout size={35} />
       </div>
-      <div className="fixed right-10 top-2/3 text-violet-200/20 animate-float pointer-events-none">
+      <div className="fixed right-10 top-2/3 text-violet-600/10 animate-float pointer-events-none">
         <Smartphone size={45} />
       </div>
-      <div className="fixed right-20 bottom-1/3 text-violet-200/25 animate-float-slow pointer-events-none">
+      <div className="fixed right-20 bottom-1/3 text-violet-600/40 animate-float-slow pointer-events-none">
         <GitBranch size={30} />
       </div>
 
@@ -89,13 +90,13 @@ function App() {
       ></div>
 
       {/* Sparkles */}
-      <div className="fixed top-1/4 right-1/4 text-violet-200/20 animate-pulse-slow pointer-events-none">
+      <div className="fixed top-1/4 right-1/4 text-violet-600/80  animate-pulse-slow pointer-events-none">
         <Sparkles size={20} />
       </div>
-      <div className="fixed bottom-1/3 left-1/4 text-violet-200/20 animate-pulse pointer-events-none">
+      <div className="fixed bottom-1/3 left-1/4 text-violet-600/20 animate-pulse pointer-events-none">
         <Star size={15} />
       </div>
-      <div className="fixed top-2/3 left-1/2 text-violet-200/15 animate-pulse-slow pointer-events-none">
+      <div className="fixed top-2/3 left-1/2 text-violet-600/10 animate-pulse-slow pointer-events-none">
         <Sparkles size={25} />
       </div>
 
@@ -104,12 +105,26 @@ function App() {
         <Navbar />
         <Home />
         <About />
-        <Services />
+        {/* <Services /> */}
         <Experience />
         <Skill />
         <Projects />
         <Contact />
         <Footer />
+
+         <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+         style={{ top: '80px' }}
+      />
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Core",
-      icon: <Code className="w-6 h-6 text-violet-600/80" />,
+      icon: <Code className="w-6 h-6" />,
       skills: [
         "React.js",
         "JavaScript (ES6+)",
@@ -26,7 +26,7 @@ const Skills = () => {
     },
     {
       title: "Styling & Frameworks",
-      icon: <Palette className="w-6 h-6 text-violet-600/80" />,
+      icon: <Palette className="w-6 h-6" />,
       skills: [
         "Tailwind CSS",
         "Bootstrap",
@@ -36,7 +36,7 @@ const Skills = () => {
     },
     {
       title: "React Ecosystem",
-      icon: <Atom className="w-6 h-6 text-violet-600/80" />,
+      icon: <Atom className="w-6 h-6" />,
       skills: [
         "React Router",
         "Redux Toolkit",
@@ -46,7 +46,7 @@ const Skills = () => {
     },
     {
       title: "Layout & Design",
-      icon: <Layout className="w-6 h-6 text-violet-600/80" />,
+      icon: <Layout className="w-6 h-6" />,
       skills: [
         "Responsive Design",
         "Flexbox/Grid",
@@ -56,7 +56,7 @@ const Skills = () => {
     },
     {
       title: "Tools & Version Control",
-      icon: <GitBranch className="w-6 h-6 text-violet-600/80" />,
+      icon: <GitBranch className="w-6 h-6" />,
       skills: [
         "Git & GitHub",
         "VS Code",
@@ -67,7 +67,7 @@ const Skills = () => {
     },
     {
       title: "Deployment ",
-      icon: <Cloud className="w-6 h-6 text-violet-600/80" />,
+      icon: <Cloud className="w-6 h-6 " />,
       skills: [
         "Vercel",
         "GitHub Pages",
@@ -145,8 +145,8 @@ const Skills = () => {
         {skillCategories.map((category, index) => (
           <div
             key={index}
-            className="group relative border bg-white rounded-2xl p-8 
-                       border-violet-600/80 transition-all duration-500
+            className="group relative border bg-violet-100 rounded-2xl p-8 
+                       border-violet-600 transition-all duration-500
                        hover:shadow-xl hover:shadow-violet-100"
             data-aos="flip-up"
             data-aos-duration="800"
@@ -164,7 +164,7 @@ const Skills = () => {
               data-aos-duration="600"
               data-aos-delay={550 + (index * 100)}
             >
-              <div className="p-2 bg-violet-50 rounded-lg group-hover:bg-violet-100 transition-colors">
+              <div className="p-2 bg-violet-600/80 text-white group-hover:text-violet-600/80 rounded-lg border hover:border-violet-600/80 group-hover:bg-white  transition-colors">
                 {category.icon}
               </div>
               <h4 className="text-gray-800 text-xl font-semibold group-hover:text-violet-600/80 transition-colors">
@@ -177,11 +177,7 @@ const Skills = () => {
               {category.skills.map((skill, skillIndex) => (
                 <span
                   key={skillIndex}
-                  className="px-3.5 py-1.5 text-sm rounded-full 
-                           bg-violet-50 border border-violet-200 
-                           text-gray-700 hover:bg-violet-600/80 
-                           hover:text-white hover:border-violet-600/80 
-                           transition-all duration-300 cursor-default"
+                  className=" px-4 py-1.5 text-sm rounded-full border border-violet-600/40 text-violet-600/80 bg-violet-600/10 hover:bg-violet-600/80 hover:text-white transition-all duration-300 cursor-default"
                   data-aos="zoom-in"
                   data-aos-duration="500"
                   data-aos-delay={600 + (index * 100) + (skillIndex * 30)}
@@ -213,10 +209,10 @@ const Skills = () => {
             >
               <div
                 className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center 
-                           rounded-xl border border-gray-200 bg-white
+                           rounded-xl border  bg-white 
                            shadow-lg group-hover:shadow-violet-200
                            transition-all duration-300 group-hover:scale-110
-                           group-hover:border-violet-400"
+                           border-violet-400"
               >
                 <div style={{ color: tech.color }} className="transition-transform duration-300 group-hover:rotate-6">
                   {tech.icon}

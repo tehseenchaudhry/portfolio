@@ -20,7 +20,6 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
@@ -30,9 +29,9 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <nav 
-        className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] md:w-[90%] lg:w-[85%] transition-all duration-300 ${
+        className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] md:w-[90%] lg:w-[87%] transition-all duration-300 ${
           scrolled ? 'bg-violet-600/80 backdrop-blur-xl lg:scale-105' : 'bg-violet-600/70 backdrop-blur-lg'
-        } rounded-full border border-gray-900 px-4 md:px-8 py-3`}
+        } rounded-full border border-white px-4 md:px-8 py-3`}
         style={{ boxShadow: 'none' }}
       >
         <div className="flex items-center justify-between">

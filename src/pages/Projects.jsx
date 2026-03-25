@@ -8,12 +8,12 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "E-Commerce Platform Food-Express",
       description: "A full-stack e-commerce application with product listing, cart functionality, and user authentication using Context API for state management.",
-      image: "https://picsum.photos/600/400?random=1",
-      liveLink: "https://project1.vercel.app",
+      image: "/food-express.png",
+      liveLink: "https://food-express-rust.vercel.app/",
       category: "react",
-      technologies: ["React", "Context API", "Tailwind CSS", "Node.js", "MongoDB"]
+      technologies:["React", "Redux Toolkit", "Tailwind CSS", "LocalStorage", "Framer Motion"] 
     },
     {
       id: 2,
@@ -22,16 +22,16 @@ const Projects = () => {
       image: "https://picsum.photos/600/400?random=2",
       liveLink: "https://project2.vercel.app",
       category: "redux",
-      technologies: ["React", "Redux Toolkit", "Tailwind CSS", "LocalStorage", "Framer Motion"]
+      technologies:["React", "Context API", "Tailwind CSS", "REST API", "Chart.js"] 
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "Sweet Cakes",
       description: "A weather application that fetches real-time data from API, with search history and theme switching using Context API.",
-      image: "https://picsum.photos/600/400?random=3",
-      liveLink: "https://project3.vercel.app",
+      image: "/sweet-cakes.png",
+      liveLink: "https://sweet-cakes-beige.vercel.app/",
       category: "api",
-      technologies: ["React", "Context API", "Tailwind CSS", "REST API", "Chart.js"]
+      technologies: ["React", "Context API", "Tailwind CSS", "AOS (Animate On Scroll)"]
     },
     {
       id: 4,
@@ -126,7 +126,7 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-violet-100 transition-all duration-500 hover:-translate-y-2"
+              className="group relative bg-violet-50 border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl hover:shadow-violet-100 transition-all duration-500 hover:-translate-y-2"
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay={200 + (index * 100)}
@@ -189,7 +189,7 @@ const Projects = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-3 py-1 text-xs rounded-full bg-violet-50 border border-violet-200 text-violet-700"
+                      className="px-3 py-1 text-xs rounded-full bg-violet-600/80 border border-violet-200 text-white"
                       data-aos="zoom-in"
                       data-aos-duration="500"
                       data-aos-delay={450 + (index * 100) + (techIndex * 30)}

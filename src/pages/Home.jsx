@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div id="home" className="px-4 sm:px-6 lg:px-18 mt-32 mb-20">
       <div
-        className="flex flex-col lg:flex-row justify-between gap-20 border p-8 rounded-2xl bg-violet-100 border-gray-600"
+        className="flex flex-col lg:flex-row justify-between gap-20 border p-8 rounded-2xl bg-violet-100 border-violet-800"
 
       >
         {/* LEFT SIDE - Text */}
@@ -39,7 +39,7 @@ const Home = () => {
             data-aos-duration="1000"
             data-aos-delay="300"
           >
-            And I'm a{" "}
+            And I'm a{" "} 
             <span className="text-violet-600/70">
               <ReactTyped
                 strings={["Frontend Developer", "React JS Developer"]}

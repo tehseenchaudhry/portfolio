@@ -98,8 +98,7 @@ const Experience = () => {
               {educationData.map((edu, index) => (
                 <div
                   key={edu.id}
-                  className="relative bg-white p-6 rounded-2xl border border-gray-200 
-                           hover:border-violet-400 hover:shadow-xl hover:shadow-violet-100 
+                  className="relative bg-violet-100 p-6 rounded-2xl border border-violet-600 hover:shadow-xl hover:shadow-violet-100 
                            transition-all duration-500 group"
                   data-aos="flip-up"
                   data-aos-duration="1000"
@@ -163,8 +162,7 @@ const Experience = () => {
               {experienceData.map((exp, index) => (
                 <div
                   key={exp.id}
-                  className="relative bg-white p-6 rounded-2xl border border-gray-200 
-                           hover:border-violet-600 hover:shadow-xl hover:shadow-violet-100 
+                  className="relative bg-violet-100 p-6 rounded-2xl border border-violet-600 hover:shadow-xl hover:shadow-violet-100 
                            transition-all duration-500 group"
                   data-aos="flip-down"
                   data-aos-duration="1000"

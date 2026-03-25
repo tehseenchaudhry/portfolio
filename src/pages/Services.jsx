@@ -13,32 +13,32 @@ import {
 const Services = () => {
   const services = [
     {
-      icon: <CodeXml className="w-7 h-7 text-violet-600/80" />,
+      icon: <CodeXml className="w-7 h-7  " />,
       title: "Responsive React.js Websites",
       description: "Modern, fast, and fully responsive websites built with React.js and Tailwind CSS that work perfectly on all devices."
     },
     {
-      icon: <LayoutDashboard className="w-7 h-7 text-violet-600/80" />,
+      icon: <LayoutDashboard className="w-7 h-7 " />,
       title: "Interactive UI Components",
       description: "Custom interactive components, animations, and dynamic user interfaces to enhance user engagement."
     },
     {
-      icon: <Smartphone className="w-7 h-7 text-violet-600/80" />,
+      icon: <Smartphone className="w-7 h-7  " />,
       title: "Mobile-First Design",
       description: "Websites designed with mobile-first approach ensuring perfect experience on smartphones, tablets, and desktops."
     },
     {
-      icon: <Palette className="w-7 h-7 text-violet-600/80" />,
+      icon: <Palette className="w-7 h-7  " />,
       title: "UI/UX Implementation",
       description: "Converting Figma/Adobe XD designs into pixel-perfect, functional web applications with attention to detail."
     },
     {
-      icon: <Rocket className="w-7 h-7 text-violet-600/80" />,
+      icon: <Rocket className="w-7 h-7 " />,
       title: "Performance Optimization",
       description: "Fast loading websites with optimized code, lazy loading, and best practices for Core Web Vitals."
     },
     {
-      icon: <Wrench className="w-7 h-7 text-violet-600" />,
+      icon: <Wrench className="w-7 h-7  " />,
       title: "Website Maintenance",
       description: "Regular updates, bug fixes, and improvements to keep your website running smoothly and securely."
     }
@@ -71,8 +71,8 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group border border-gray-200 rounded-2xl p-8 
-                         bg-white hover:border-violet-400 transition-all duration-500
+              className="group border  rounded-2xl p-8 
+                         bg-violet-100 border-violet-600 transition-all duration-500
                          hover:shadow-xl hover:shadow-violet-100"
               data-aos="fade-up"
               data-aos-duration="1000"
@@ -80,10 +80,10 @@ const Services = () => {
             >
               {/* Icon Container */}
               <div 
-                className="w-14 h-14 flex items-center justify-center 
-                            rounded-xl bg-violet-50 border border-violet-200 
-                            mb-6 group-hover:scale-110 group-hover:bg-violet-100 
-                            transition-all duration-300"
+                className="w-14 h-14 flex items-center justify-center text-white
+                            rounded-xl bg-violet-600/80  border border-violet-200  group-hover:border-violet-600/80:
+                            mb-6 group-hover:scale-110 group-hover:bg-white 
+                            transition-all duration-300 group-hover:text-violet-600/80"
                 data-aos="zoom-in"
                 data-aos-duration="800"
                 data-aos-delay={index * 100 + 50}

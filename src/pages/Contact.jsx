@@ -1,34 +1,27 @@
-import React, { useState } from 'react';
-import { SlLocationPin } from "react-icons/sl";
-import { FiPhoneCall } from "react-icons/fi";
-import { TfiEmail } from "react-icons/tfi";
+import React, { useRef} from 'react';
+import emailjs from "@emailjs/browser";
+import { toast } from 'react-toastify';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    email: '',
-    phone: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
+ const ref = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({
-      firstName: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+
+    emailjs
+      .sendForm('service_7rulznn', 'template_nrqrtkb', ref.current, {
+        publicKey: 't1FY4jgpMfqsGVWS-',
+      })
+      .then(() => {
+        toast("Email sent successfully", { type: "success" });
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
   };
+
+  
+
+
 
   return (
     <div id='contact' className='px-5 md:px-20 py-20 relative'>
@@ -57,12 +50,12 @@ const Contact = () => {
 
       {/* Form Container with AOS */}
       <div
-        className="contact relative z-10 w-full md:w-[650px] mx-auto p-8 rounded-3xl bg-white/30 backdrop-blur-md border border-violet-600/80 shadow-[0_0_30px_10px_rgba(139,92,246,0.5)] transition-all"
+        className="contact relative z-10 w-full md:w-[650px] mx-auto p-8 rounded-3xl  backdrop-blur-md border border-violet-600/80 bg-violet-100 transition-all"
         data-aos="fade-up"
         data-aos-duration="1000"
         data-aos-delay="200"
       >
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <form ref={ref} onSubmit={handleSubmit}  className="flex flex-col gap-4">
           
           {/* Name Field */}
           <div 
@@ -77,11 +70,9 @@ const Contact = () => {
             <input
               type="text"
               name="firstName"
-              id="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
+              id="firstName"             
               required
-              className="w-full px-3 py-2 rounded-xl border border-violet-600/80 focus:outline-none text-black placeholder-gray-600 transition"
+              className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Enter your name"
             />
           </div>
@@ -99,11 +90,9 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              id="email"
-              value={formData.email}
-              onChange={handleChange}
+              id="email"            
               required
-              className="w-full px-3 py-2 rounded-xl border border-violet-600/80 focus:outline-none text-black placeholder-gray-600 transition"
+              className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Enter your email"
             />
           </div>
@@ -121,10 +110,7 @@ const Contact = () => {
             <input
               type="tel"
               name="phone"
-              id="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-3 py-2 rounded-xl border border-violet-600/80 focus:outline-none text-black placeholder-gray-600 transition"
+              className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Enter your phone number"
             />
           </div>
@@ -141,12 +127,10 @@ const Contact = () => {
             </label>
             <textarea
               name="message"
-              id="message"
-              value={formData.message}
-              onChange={handleChange}
+              id="message"          
               required
               rows="5"
-              className="w-full px-3 py-2 rounded-xl border border-violet-600/80 focus:outline-none text-black placeholder-gray-600 transition"
+              className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Write your message"
             ></textarea>
           </div>
