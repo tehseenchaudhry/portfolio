@@ -57,14 +57,17 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-violet-100 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            {/* Let's Talk in Desktop */}
+            
+          </div>
+
+          {/* Let's Talk in Desktop */}
             <a 
               href="#contact" 
               className="border border-white hover:bg-white hover:text-violet-900 text-white font-semibold px-6 py-2 rounded-full transition-all duration-300"
             >
               Let's Talk
             </a>
-          </div>
+            
 
           {/* Mobile Menu Button */}
           <button 

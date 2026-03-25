@@ -8,17 +8,17 @@ const Experience = () => {
       id: 1,
       degree: "Intermediate Degree",
       institution: "Associate College Dahranwala",
-      location: "Dahranwala, Pakistan",
-      period: "Completed",
+      location: "Dahranwala",
+      // period: "Completed",
       description: "Completed intermediate education focusing on Mathematics and Computer Science, gaining foundational skills in programming and logical reasoning."
     },
     {
       id: 2,
       degree: "Bachelor of Science in Information Technology",
       institution: "Islamia University Bahawalpur",
-      location: "Bahawalpur, Pakistan",
-      period: "2022 - 2026",
-      description: "Pursuing a degree in IT, gaining in-depth knowledge of HTML, CSS, Bootstrap, JavaScript, React, and Tailwind CSS. Developed strong problem-solving and project management skills through academic projects."
+      location: "Bahawalpur",
+      // period: "2022 - 2026",
+      description: "Currently pursuing BS IT, specializing in front-end web development with React.js, JavaScript, and Tailwind CSS. Building strong foundation through academic projects and hands-on practice."
     }
   ];
 
@@ -28,24 +28,24 @@ const Experience = () => {
       id: 1,
       title: "Web Developer (Practice Projects)",
       company: "7 Skies Software",
-      period: "Previous Experience",
+      period: "08/2024-02/2025",
       description: [
-        "Worked on several practice projects to enhance web development skills",
-        "Developed websites using HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS",
-        "Collaborated with team members remotely to complete assigned tasks"
+       "Worked on several practice projects to enhance web development skills",
+    "Developed websites using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js",
+    "Built individual projects focusing on responsive design and modern UI practices"
       ]
     },
     {
       id: 2,
       title: "Web Development Team Member",
       company: "Codes Thinker",
-      period: "Present",
+      period: "03/2025-Present",
       current: true,
       description: [
-        "Currently working remotely with the team at Codes Thinker on various projects",
-        "Collaborating with team members online to build responsive web applications",
-        "Learning and implementing modern web development practices",
-        "Contributing to team projects and code reviews from home"
+        "Working on-site at software house, collaborating with team members on various web development projects",
+        "Building responsive web applications using modern front-end technologies",
+        "Implementing best practices in React.js, state management, and responsive design",
+        "Contributing to team projects and code reviews from "
       ]
     }
   ];
@@ -53,9 +53,9 @@ const Experience = () => {
   return (
     <section id="education-experience" className="px-4 sm:px-6 lg:px-18 py-20  overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header - Fade Down */}
-        <div 
+        <div
           className="text-center mb-16"
           data-aos="fade-down"
           data-aos-duration="1000"
@@ -72,16 +72,16 @@ const Experience = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          
+
           {/* Education Column */}
-          <div 
+          <div
             className="space-y-8"
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay="100"
           >
             {/* Education Header */}
-            <div 
+            <div
               className="flex items-center gap-3 mb-6"
               data-aos="fade-up"
               data-aos-duration="800"
@@ -107,13 +107,13 @@ const Experience = () => {
                   {/* Timeline Dot */}
                   <div className="absolute -left-3 top-8 w-6 h-6 bg-violet-600/80 rounded-full 
                                 border-4 border-white shadow-md"></div>
-                  
+
                   {/* Content */}
                   <div className="ml-4">
                     <h4 className="text-gray-800 text-xl font-bold mb-2 group-hover:text-violet-600/80 transition-colors">
                       {edu.degree}
                     </h4>
-                    
+
                     <div className="flex flex-wrap gap-4 mb-3 text-sm text-gray-600">
                       <span className="flex items-center gap-1 font-medium text-violet-600/80">
                         {edu.institution}
@@ -122,12 +122,9 @@ const Experience = () => {
                         <MapPin className="w-4 h-4 text-violet-600/80" />
                         {edu.location}
                       </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4 text-violet-600/80" />
-                        {edu.period}
-                      </span>
+
                     </div>
-                    
+
                     <p className="text-gray-600 text-sm leading-relaxed">
                       {edu.description}
                     </p>
@@ -138,14 +135,14 @@ const Experience = () => {
           </div>
 
           {/* Experience Column */}
-          <div 
+          <div
             className="space-y-8"
             data-aos="fade-left"
             data-aos-duration="1000"
             data-aos-delay="100"
           >
             {/* Experience Header */}
-            <div 
+            <div
               className="flex items-center gap-3 mb-6"
               data-aos="fade-up"
               data-aos-duration="800"
@@ -171,7 +168,7 @@ const Experience = () => {
                   {/* Timeline Dot */}
                   <div className="absolute -left-3 top-8 w-6 h-6 bg-violet-600/80 rounded-full 
                                 border-4 border-white shadow-md"></div>
-                  
+
                   {/* Content */}
                   <div className="ml-4">
                     <div className="flex items-center gap-2 mb-1">
@@ -179,7 +176,7 @@ const Experience = () => {
                         {exp.title}
                       </h4>
                       {exp.current && (
-                        <span 
+                        <span
                           className="px-2 py-0.5 bg-green-100 text-green-600 text-xs font-semibold rounded-full"
                           data-aos="zoom-in"
                           data-aos-duration="500"
@@ -189,7 +186,7 @@ const Experience = () => {
                         </span>
                       )}
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-4 mb-3 text-sm text-gray-600">
                       <span className="flex items-center gap-1 font-medium text-violet-600/80">
                         <Briefcase className="w-3 h-3" />
@@ -200,11 +197,11 @@ const Experience = () => {
                         {exp.period}
                       </span>
                     </div>
-                    
+
                     <ul className="space-y-2 text-gray-600 text-sm">
                       {exp.description.map((item, idx) => (
-                        <li 
-                          key={idx} 
+                        <li
+                          key={idx}
                           className="flex items-start gap-2"
                           data-aos="fade-up"
                           data-aos-duration="600"

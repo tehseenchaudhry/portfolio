@@ -70,7 +70,6 @@ const Contact = () => {
             <input
               type="text"
               name="firstName"
-              id="firstName"             
               required
               className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Enter your name"
@@ -110,6 +109,7 @@ const Contact = () => {
             <input
               type="tel"
               name="phone"
+              required
               className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Enter your phone number"
             />
@@ -128,7 +128,6 @@ const Contact = () => {
             <textarea
               name="message"
               id="message"          
-              required
               rows="5"
               className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Write your message"
@@ -144,7 +143,7 @@ const Contact = () => {
           >
             <button
               type="submit"
-              className="bg-violet-600/80 text-white px-20 py-2 rounded-xl font-semibold hover:bg-violet-500/80 hover:text-white transition-all duration-300"
+              className="bg-violet-600/80 text-white px-20 py-2 rounded-xl font-semibold hover:bg-violet-500 hover:text-white transition-all duration-300    hover:shadow-[0_0_35px_rgba(198, 130, 238)]"
             >
               Submit
             </button>

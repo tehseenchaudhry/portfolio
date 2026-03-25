@@ -8,79 +8,84 @@ const Projects = () => {
   const projectsData = [
     {
       id: 1,
-      title: "E-Commerce Platform Food-Express",
-      description: "A full-stack e-commerce application with product listing, cart functionality, and user authentication using Context API for state management.",
+      title: "Food Express - Food Delivery Platform",
+      description: "A task management application with drag-drop functionality, filters, and persistent storage using Redux Toolkit for complex state management",
       image: "/food-express.png",
       liveLink: "https://food-express-rust.vercel.app/",
-      category: "react",
-      technologies:["React", "Redux Toolkit", "Tailwind CSS", "LocalStorage", "Framer Motion"] 
+      category: "redux",
+      technologies: ["React", "Redux Toolkit", "Tailwind CSS", "LocalStorage", "Framer Motion"]
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A task management application with drag-drop functionality, filters, and persistent storage using Redux Toolkit for complex state management.",
-      image: "https://picsum.photos/600/400?random=2",
-      liveLink: "https://project2.vercel.app",
-      category: "redux",
-      technologies:["React", "Context API", "Tailwind CSS", "REST API", "Chart.js"] 
+      title: "Mobilia Consulting",
+      description: "A modern multi-page consulting website with interactive UI, routing, and responsive design using React, React Router, and Tailwind CSS.",
+      image: "/mobilia.png",
+      liveLink: "https://mobilia-consulting-eta.vercel.app/",
+      category: "react",
+      technologies: ["React", "React Router", "Tailwind CSS", "AOS (Animate On Scroll)"]
+      // ["React", "Context API", "Tailwind CSS", "REST API", "Chart.js"] 
     },
     {
       id: 3,
-      title: "Sweet Cakes",
-      description: "A weather application that fetches real-time data from API, with search history and theme switching using Context API.",
+      title: "E-Commerce Platform Sweet Cakes with Cart",
+      description: "A full-stack e-commerce application with product listing, cart functionality, and user authentication using Context API for state management.",
+      // "A weather application that fetches real-time data from API, with search history and theme switching using Context API.",
       image: "/sweet-cakes.png",
       liveLink: "https://sweet-cakes-beige.vercel.app/",
-      category: "api",
-      technologies: ["React", "Context API", "Tailwind CSS", "AOS (Animate On Scroll)"]
+      category: "context",
+      technologies: ["React", "Context API", "React Router", "Tailwind CSS", "AOS (Animate On Scroll)"]
     },
     {
-      id: 4,
+    id: 4,
+    title: "Logistics Shipment & Payment Dashboard",
+    description: "A comprehensive logistics dashboard for tracking shipments, monitoring payments, and visualizing invoice status with interactive charts and real-time data overview.",
+    image: "/shipment-dashboard.png",
+    liveLink: "https://shipment-dashboard-sooty.vercel.app/",
+    category: "react",
+    technologies: ["React", "Recharts",  "Tailwind CSS", "React Router" ]
+  },
+  {
+  id: 5,
+  title: "AKOYA Premium Laundry",
+  description: "A luxury laundry service platform with service tiers (Standard/Express), fragrance selection, premium packaging options, and seamless pickup scheduling system using Redux Toolkit for state management.",
+  image: "/akoya-laundry.png",
+  liveLink: "https://lundary.vercel.app/",
+  category: "redux",
+  technologies: ["React", "Redux Toolkit", "React Router", "Tailwind CSS", "React Icons", "Framer Motion"]
+},
+    {
+      id: 6,
       title: "Blog Application",
       description: "A blog platform with post creation, editing, and deletion. Uses Redux Toolkit for state management and React Router for navigation.",
       image: "https://picsum.photos/600/400?random=4",
       liveLink: "https://project4.vercel.app",
-      category: "redux",
+      category: "api",
       technologies: ["React", "Redux Toolkit", "React Router", "Tailwind CSS", "JSON Server"]
     },
-    {
-      id: 5,
-      title: "Movie Search App",
-      description: "A movie discovery app with search functionality, filters, and favorites list managed through Context API.",
-      image: "https://picsum.photos/600/400?random=5",
-      liveLink: "https://project5.vercel.app",
-      category: "api",
-      technologies: ["React", "Context API", "Tailwind CSS", "OMDB API", "LocalStorage"]
-    },
-    {
-      id: 6,
-      title: "Dashboard UI",
-      description: "An admin dashboard with charts, tables, and theme customization. Uses Redux Toolkit for theme and sidebar state management.",
-      image: "https://picsum.photos/600/400?random=6",
-      liveLink: "https://project6.vercel.app",
-      category: "react",
-      technologies: ["React", "Redux Toolkit", "Tailwind CSS", "Recharts", "React Router"]
-    }
+   
+    
   ];
 
   // Filter buttons
   const filters = [
     { name: 'All', value: 'all' },
     { name: 'React', value: 'react' },
+    { name: 'Context API', value: 'context' },
     { name: 'Redux Toolkit', value: 'redux' },
     { name: 'API Integration', value: 'api' }
   ];
 
   // Filter projects based on active filter
-  const filteredProjects = activeFilter === 'all' 
-    ? projectsData 
+  const filteredProjects = activeFilter === 'all'
+    ? projectsData
     : projectsData.filter(project => project.category === activeFilter);
 
   return (
     <section id="projects" className="px-4 sm:px-6 lg:px-18 py-20 ">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Section Header - Fade Down */}
-        <div 
+        <div
           className="text-center mb-12"
           data-aos="fade-down"
           data-aos-duration="1000"
@@ -97,7 +102,7 @@ const Projects = () => {
         </div>
 
         {/* Filter Buttons - Fade Up */}
-        <div 
+        <div
           className="flex flex-wrap justify-center gap-3 mb-12"
           data-aos="fade-up"
           data-aos-duration="800"
@@ -108,8 +113,8 @@ const Projects = () => {
               key={filter.value}
               onClick={() => setActiveFilter(filter.value)}
               className={`px-5 py-2 rounded-full border transition-all duration-300 
-                ${activeFilter === filter.value 
-                  ? 'bg-violet-600/80 border-violet-600/80 text-white' 
+                ${activeFilter === filter.value
+                  ? 'bg-violet-600/80 border-violet-600/80 text-white'
                   : 'bg-white border-gray-300 text-gray-600 hover:bg-violet-50 hover:border-violet-400 hover:text-violet-600/80'
                 }`}
               data-aos="zoom-in"
@@ -132,7 +137,7 @@ const Projects = () => {
               data-aos-delay={200 + (index * 100)}
             >
               {/* Project Image */}
-              <div 
+              <div
                 className="relative aspect-video overflow-hidden bg-gray-100"
                 data-aos="zoom-in"
                 data-aos-duration="800"
@@ -143,7 +148,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                
+
                 {/* Overlay with Links */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-3">
@@ -161,7 +166,7 @@ const Projects = () => {
 
               {/* Project Info */}
               <div className="p-6">
-                <h3 
+                <h3
                   className="text-gray-800 text-xl font-bold mb-2 group-hover:text-violet-600/80 transition-colors"
                   data-aos="fade-right"
                   data-aos-duration="800"
@@ -169,8 +174,8 @@ const Projects = () => {
                 >
                   {project.title}
                 </h3>
-                
-                <p 
+
+                <p
                   className="text-gray-600 text-sm mb-4 line-clamp-2"
                   data-aos="fade-right"
                   data-aos-duration="800"
@@ -180,7 +185,7 @@ const Projects = () => {
                 </p>
 
                 {/* Technologies */}
-                <div 
+                <div
                   className="flex flex-wrap gap-2"
                   data-aos="fade-up"
                   data-aos-duration="800"
