@@ -66,7 +66,7 @@ const About = () => {
             </div>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
               {/* Experience Card */}
               <div 
                 className="border border-violet-600/80 rounded-xl p-4 backdrop-blur-md text-center hover:shadow-lg hover:shadow-violet-600/20 transition-all duration-300"
