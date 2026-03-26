@@ -19,10 +19,6 @@ const Contact = () => {
       });
   };
 
-  
-
-
-
   return (
     <div id='contact' className='px-5 md:px-20 py-20 relative'>
       
@@ -88,8 +84,7 @@ const Contact = () => {
             </label>
             <input
               type="email"
-              name="email"
-              id="email"            
+              name="email"           
               required
               className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Enter your email"
@@ -126,8 +121,7 @@ const Contact = () => {
               Message
             </label>
             <textarea
-              name="message"
-              id="message"          
+              name="message"         
               rows="5"
               className="w-full px-3 py-3 rounded-xl border border-violet-600/40 focus:outline-none text-black placeholder-gray-400 transition"
               placeholder="Write your message"
