@@ -40,7 +40,7 @@ const Projects = () => {
     title: "Logistics Shipment & Payment Dashboard",
     description: "A comprehensive logistics dashboard for tracking shipments, monitoring payments, and visualizing invoice status with interactive charts and real-time data overview.",
     image: "/shipment-dashboard.png",
-    liveLink: "https://shipment-dashboard-sooty.vercel.app/",
+    liveLink: "https://shipment-dashboard-lyart.vercel.app/",
     category: "react",
     technologies: ["React", "Recharts",  "Tailwind CSS", "React Router" ]
   },
