@@ -49,7 +49,7 @@ const Projects = () => {
   title: "AKOYA Premium Laundry",
   description: "A luxury laundry service platform with service tiers (Standard/Express), fragrance selection, premium packaging options, and seamless pickup scheduling system using Redux Toolkit for state management.",
   image: "/akoya-laundry.png",
-  liveLink: "https://lundary.vercel.app/",
+  liveLink: "https://lundary-rose.vercel.app/",
   category: "redux",
   technologies: ["React", "Redux Toolkit", "React Router", "Tailwind CSS", "React Icons", "Framer Motion"]
 },
