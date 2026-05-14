@@ -26,17 +26,6 @@ const Experience = () => {
   const experienceData = [
     {
       id: 1,
-      title: "Web Developer (Practice Projects)",
-      company: "7 Skies Software",
-      period: "04/2024-02/2025",
-      description: [
-       "Worked on several practice projects to enhance web development skills",
-    "Developed websites using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js",
-    "Built individual projects focusing on responsive design and modern UI practices"
-      ]
-    },
-    {
-      id: 2,
       title: "Web Development Team Member",
       company: "Codes Thinker",
       period: "03/2025-Present",
@@ -47,7 +36,18 @@ const Experience = () => {
         "Implementing best practices in React.js, state management, and responsive design",
         "Contributing to team projects and code reviews from "
       ]
-    }
+    },
+       {
+      id: 2,
+      title: "Web Developer (Practice Projects)",
+      company: "7 Skies Software",
+      period: "04/2024-02/2025",
+      description: [
+       "Worked on several practice projects to enhance web development skills",
+    "Developed websites using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js",
+    "Built individual projects focusing on responsive design and modern UI practices"
+      ]
+    },
   ];
 
   return (
