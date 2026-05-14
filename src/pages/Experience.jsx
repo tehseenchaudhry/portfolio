@@ -28,7 +28,7 @@ const Experience = () => {
       id: 1,
       title: "Web Developer (Practice Projects)",
       company: "7 Skies Software",
-      period: "08/2024-02/2025",
+      period: "04/2024-02/2025",
       description: [
        "Worked on several practice projects to enhance web development skills",
     "Developed websites using HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, and React.js",

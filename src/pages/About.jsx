@@ -77,7 +77,7 @@ const About = () => {
                 <div className="flex justify-center mb-2">
                   <Briefcase className="w-8 h-8 text-violet-600/80" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800">1</h3>
+                <h3 className="text-2xl font-bold text-gray-800">2</h3>
                 <p className="text-gray-600 text-sm">Years Experience</p>
               </div>
 
